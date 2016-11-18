@@ -1,6 +1,5 @@
 (function() {
-
-    var app = angular.module('todo', []);
+    var app = angular.module('todo', ['elements']);
 
     app.controller('TodoController', function() {
         this.tasks = [
@@ -27,19 +26,4 @@
             task.remove = true;
         }
     });
-
-    app.directive('newTask', function() {
-        return {
-            restrict: 'E',
-            templateUrl: 'includes/form-new-task.html'
-        };
-    });
-
-    app.directive('taskList', function() {
-        return {
-            restrict: 'E',
-            templateUrl: 'includes/task-list.html'
-        };
-    })
-
 })();
