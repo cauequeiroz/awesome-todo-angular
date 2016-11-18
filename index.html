@@ -19,25 +19,11 @@
         </header>  
 
         <!-- form -->
-        <form name="newTaskForm" ng-submit="newTaskForm.$valid && todo.addTask()" novalidate>
-            <input ng-model="todo.new.name" type="text" class="form-control" placeholder="Insert your task here..." required>
-        </form>
+        <new-task></new-task>
+
         <!-- list -->
-        <table class="table">
-            <tr>
-                <th>#</th>
-                <th>Task Name</th>
-                <th>Controls</th>
-            </tr>
-            <tr ng-repeat="task in todo.tasks" ng-class="{ complete:task.complete }" ng-hide="task.remove">
-                <td>{{task.id}}</th>
-                <td class="task-name">{{task.name}}</td>
-                <td>
-                    <button class="btn btn-default" type="submit" ng-click="todo.completeTask(task)">Complete</button>
-                    <button class="btn btn-default" type="submit" ng-click="todo.removeTask(task)">Delete</button>
-                </td>
-            </tr>
-        </table>
+        <task-list></task-list>
+        
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
