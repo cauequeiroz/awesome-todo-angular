@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Do something",
+        "complete": false,
+        "remove": false
+    },
+    {
+        "id": 2,
+        "name": "Do something else",
+        "complete": true,
+        "remove": false
+    },
+    {
+        "id": 3,
+        "name": "Do more stuff",
+        "complete": true,
+        "remove": false
+    },
+    {
+        "id": 4,
+        "name": "Do that again",
+        "complete": false,
+        "remove": false
+    },
+    {
+        "id": 5,
+        "name": "Do another stuff",
+        "complete": false,
+        "remove": false
+    },
+    {
+        "id": 6,
+        "name": "Do that again",
+        "complete": false,
+        "remove": false
+    }
+]

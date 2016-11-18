@@ -1,13 +1,13 @@
 (function() {
     var app = angular.module('todo', ['elements']);
 
-    app.controller('TodoController', function() {
-        this.tasks = [
-            {id: 1, name: 'Do something', complete: false, remove: false},
-            {id: 2, name: 'Do something else', complete: false, remove: false},
-            {id: 3, name: 'Do more stuff', complete: true, remove: false},
-            {id: 4, name: 'Do that again', complete: false, remove: false},
-        ];
+    app.controller('TodoController', ['$http', function($http) {
+        this.tasks = [];
+
+        var $this = this;
+        $http.get('/tasks.json').success(function(data) {
+            $this.tasks = data;
+        });
 
         this.new = {};
 
@@ -25,5 +25,5 @@
         this.removeTask = function(task) {
             task.remove = true;
         }
-    });
+    }]);
 })();
