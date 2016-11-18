@@ -29,33 +29,9 @@
                 <th>Task Name</th>
                 <th>Controls</th>
             </tr>
-            <tr>
-                <td>1</th>
-                <td>Do something</td>
-                <td>
-                    <button class="btn btn-default" type="submit">Complete</button>
-                    <button class="btn btn-default" type="submit">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td>1</th>
-                <td>Do something</td>
-                <td>
-                    <button class="btn btn-default" type="submit">Complete</button>
-                    <button class="btn btn-default" type="submit">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td>1</th>
-                <td>Do something</td>
-                <td>
-                    <button class="btn btn-default" type="submit">Complete</button>
-                    <button class="btn btn-default" type="submit">Delete</button>
-                </td>
-            </tr>
-            <tr>
-                <td>1</th>
-                <td>Do something</td>
+            <tr ng-repeat="task in todo.tasks">
+                <td>{{task.id}}</th>
+                <td>{{task.name}}</td>
                 <td>
                     <button class="btn btn-default" type="submit">Complete</button>
                     <button class="btn btn-default" type="submit">Delete</button>
