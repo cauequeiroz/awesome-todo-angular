@@ -5,7 +5,7 @@
         this.tasks = [];
 
         var $this = this;
-        $http.get('http://cauequeiroz.com.br/awesome-todo-angular/tasks.json').success(function(data) {
+        $http.get('tasks.json').success(function(data) {
             $this.tasks = data;
         });
 
