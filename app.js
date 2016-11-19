@@ -1,5 +1,5 @@
 (function() {
-    angular.module('todo', ['elements'])
+    angular.module('todo', ['elements', 'ngRoute'])
 
     .controller('TodoController', ['$http', function($http) {
         this.tasks = [];

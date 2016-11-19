@@ -16,18 +16,20 @@
         <header class="jumbotron">
             <h1>awesome todo</h1>
             <p>An awesome todo list built with AngularJS.</p>
+
+            <a class="btn btn-default" href="#/folder" role="button">Folder</a>
+            <a class="btn btn-default" href="#/tasks" role="button">Tasks</a>
         </header>  
 
-        <!-- form -->
-        <new-task></new-task>
-
-        <!-- list -->
-        <task-list></task-list>
+        <!-- view -->
+        <div ng-view></div>
 
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
     <script src="elements.js"></script>
     <script src="app.js"></script>
+    <script src="route.js"></script>
 </body>
 </html>
