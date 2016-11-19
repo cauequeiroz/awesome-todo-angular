@@ -1,7 +1,7 @@
 (function() {
-    var app = angular.module('todo', ['elements']);
+    angular.module('todo', ['elements'])
 
-    app.controller('TodoController', ['$http', function($http) {
+    .controller('TodoController', ['$http', function($http) {
         this.tasks = [];
 
         var $this = this;

@@ -1,14 +1,14 @@
 (function() {
-    var app = angular.module('elements', []);
+    angular.module('elements', [])
 
-    app.directive('newTask', function() {
+    .directive('newTask', function() {
         return {
             restrict: 'E',
             templateUrl: 'includes/form-new-task.html'
         };
-    });
+    })
 
-    app.directive('taskList', function() {
+    .directive('taskList', function() {
         return {
             restrict: 'E',
             templateUrl: 'includes/task-list.html'
