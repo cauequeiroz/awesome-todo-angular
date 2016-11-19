@@ -3,13 +3,7 @@
 
     .controller('TodoController', ['$http', function($http) {
         this.tasks = [];
-
-        var $this = this;
-        $http.get('tasks.json').success(function(data) {
-            $this.tasks = data;
-        });
-
-        this.new = {};
+        this.new   = {};
 
         this.addTask = function() {
             this.new.id = this.tasks[this.tasks.length-1].id + 1;
@@ -25,5 +19,10 @@
         this.removeTask = function(task) {
             task.remove = true;
         }
+
+        var controller = this;
+        $http.get('tasks.json').success(function(data) {
+            controller.tasks = data;
+        });
     }]);
 })();
